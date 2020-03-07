@@ -17,4 +17,9 @@ class User < ApplicationRecord
   validates :introduction, length: {maximum: 50}
 
   has_many :favorites
+
+  def following?(other_user)
+    self.following.include?(other_user)
+  end
+
 end
