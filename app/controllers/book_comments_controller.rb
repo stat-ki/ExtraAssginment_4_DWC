@@ -22,7 +22,7 @@ class BookCommentsController < ApplicationController
     end
     @book_comment.destroy
     redirect_to request.referer
-    
+
   end
 
   private
