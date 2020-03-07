@@ -10,10 +10,14 @@
       </tr>
       <tr>
         <th>follows</th>
-        <th><%= user.following.count %></th>
+        <th>
+          <%= link_to("#{user.following.count}", "/users/#{user.id}/follows") %>
+        </th>
       </tr>
         <th>followers</th>
-        <th><%= user.followers.count %></th>
+        <th>
+          <%= link_to("#{user.followers.count}", "/users/#{user.id}/followers") %>
+        </th>
       </tr>
 </table>
 
