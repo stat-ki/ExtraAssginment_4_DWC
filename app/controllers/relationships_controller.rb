@@ -9,13 +9,13 @@ class RelationshipsController < ApplicationController
             relationship.followed_id = params[:followed_id]
             relationship.save
         end
-        redirect_to(users_path)
+        redirect_back(fallback_location: root_path)
     end
 
     def destroy
         relationship = Relationship.find(params[:id])
         relationship.destroy
-        redirect_to(users_path)
+        redirect_back(fallback_location: root_path)
     end
 
     private
